@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  color: black;
+}
+.navbar-nav li {
+  border-right: 1px solid rgb(0, 0, 0);
+  margin-left: 10px;
+  padding-right: 10px;
+}
+
+.help-info a{
+  color: #666666;
+}
+@media (max-width: 767px){
+.help-block {
+    font-size: 0.95em;
+}
+}
+.help-block {
+    color: #666666;
+    font-size: 1.1em;
+    line-height: 1.8em;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-nav li {
+    border-right: none;
+  }
+  .col-sm-4{
+    margin-bottom:10px;
+  }
+  .heading{
+    font-size:2rem;
+    text-align: center; 
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-nav li {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .heading{
+    font-size:1.6rem;
+    text-align:center;
+  }
+}
