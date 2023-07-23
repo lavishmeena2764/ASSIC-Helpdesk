@@ -42,17 +42,27 @@
                 <li class="nav-item"><a href="" class="nav-link text-dark">Donations</a></li>
                 <li class="nav-item"><a href="" class="nav-link text-dark">Chapters</a></li>
                 <li class="nav-item"><a href="" class="nav-link text-dark">News</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" style="color:black;" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="button-dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle">
                         Events
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">
+                                GAM 2022
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                GAM 2023
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                View All Events
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li style="border: none;" class="nav-item"><a href="" class="nav-link text-dark">Helpdesk</a></li>
             </ul>
@@ -120,6 +130,32 @@
 
 
         </div>
+        <script>
+            jQuery(document).ready(function (e) {
+                function t(t) {
+                    e(t).bind("click", function (t) {
+                        t.preventDefault();
+                        e(this).parent().fadeOut()
+                    })
+                }
+                e(".dropdown-toggle").click(function () {
+                    var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
+                    e(".button-dropdown .dropdown-menu").hide();
+                    e(".button-dropdown .dropdown-toggle").removeClass("active");
+                    if (t) {
+                        e(this).parents(".button-dropdown").children(".dropdown-menu").toggle().parents(".button-dropdown").children(".dropdown-toggle").addClass("active")
+                    }
+                });
+                e(document).bind("click", function (t) {
+                    var n = e(t.target);
+                    if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-menu").hide();
+                });
+                e(document).bind("click", function (t) {
+                    var n = e(t.target);
+                    if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-toggle").removeClass("active");
+                })
+            });
+        </script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
         <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>

@@ -2,11 +2,39 @@ body {
   font-family: sans-serif;
   color: black;
 }
+
 .navbar-nav li {
   border-right: 1px solid rgb(0, 0, 0);
   margin-left: 10px;
   padding-right: 10px;
 }
+
+.button-dropdown ul{
+  left: auto;
+}
+
+.button-dropdown{
+  padding-top: 7px;
+}
+
+.button-dropdown a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+.button-dropdown a{
+  text-decoration: none;
+  color: black;
+}
+
+.button-dropdown ul li{
+  border: none;
+}
+.button-dropdown ul li a{
+  text-decoration: none;
+  color: black;
+}
+
 
 .help-info a{
   color: #666666;
